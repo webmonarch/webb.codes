@@ -1,0 +1,14 @@
+/build/
+
+# Boilerplate
+
+.DS_store
+/.sass-cache/
+
+# JavaScript Stuff
+/node_modules/
+/bower_components/
+
+# IDEA IntelliJ Stuff
+/.idea/workspace.xml
+/.idea/tasks.xml

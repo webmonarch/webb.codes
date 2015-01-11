@@ -1,0 +1,103 @@
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+
+$yellow-bg: #FFD07D;
+$font-color-dark: #4F4F4F;
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+
+  color: $font-color-dark;
+}
+
+@mixin min-tablet() {
+  @media (min-width: $screen-sm-min) {
+    @content;
+  }
+}
+
+// main landing page
+.landing {
+
+  $padding: 5vmin;
+  $padding-big: 10vmin;
+
+
+  .jumbotron {
+    display: block;
+    position: relative;
+
+    background-color: $yellow-bg;
+
+    height: 62vh;
+    margin-bottom: 0;
+
+    .content {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      padding: 0 0 $padding $padding;
+      @include min-tablet() {
+        padding: 0 0 $padding-big $padding-big;
+
+      }
+
+      * {
+        margin: 0;
+        font-size: 1.5em;
+        line-height: 1.2em;
+      }
+
+      h1 {
+        margin: 0.2em 0 0.35em -0.06em;
+        font-size: 5em;
+        line-height: 1em;
+      }
+    }
+  }
+
+  .social {
+    padding: $padding 0 0 $padding;
+    @include min-tablet() {
+      padding: $padding-big 0 0 $padding-big;
+    }
+
+    height: 38vh;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        background-color: $yellow-bg;
+        border-radius: 50%;
+
+        margin: 0 3px 0 0;
+
+        $size: 3em;
+
+        text-align: center;
+
+        a {
+          display: inline-block;
+
+          color: $font-color-dark;
+
+          width: $size;
+          //        height: $size;
+          line-height: $size;
+          font-size: $size / 2 ;
+
+          &:hover {
+            color: white;
+          }
+
+          @include transition(color 0.5s ease)
+        }
+      }
+    }
+  }
+}
+
